@@ -1,2 +1,2 @@
 # MyTime
-This project use full to showcase the employee timings in office.
+This project is used to display the time sheets of the employees.
