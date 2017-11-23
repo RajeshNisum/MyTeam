@@ -1,0 +1,15 @@
+	<div class="main">
+		<div class="login-form" ng-controller="loginController">
+			<h1>Member Login</h1>
+					<div class="head">
+						<img src="images/user.png"/>
+					</div>
+				<form ng-submit="authenticate()">
+						<input type="text" id="username" value="Email"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ng-model="data.username" ng-required='true'>
+						<input type="password" id="password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" ng-model="data.password" ng-required='true'>
+						<div class="submit">
+							<input type="submit" value="LOGIN" >
+					</div>	
+				</form>
+			</div>
+		</div>
