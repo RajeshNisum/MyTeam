@@ -39,7 +39,7 @@
                     </td>
                 </tfoot>
                 <tbody>
-                    <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sortingOrder:reverse">
+                    <tr ng-repeat="item in items">
                         <td>{{item.employeeid}}</td>
                         <td>{{item.firstLogin}}</td>
                         <td>{{item.lastLogout}}</td>
