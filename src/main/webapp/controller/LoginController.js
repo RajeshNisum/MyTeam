@@ -25,7 +25,6 @@ myApp.controller("loginController", function($scope, $location, $http,
 					.then(
 							function(response) {
 								var role = getRoleOfUser(response.data.authorities);
-								window.alert(role);
 								if (role) {
 									$location.path("/manager");
 								} else {

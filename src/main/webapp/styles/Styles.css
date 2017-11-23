@@ -19,10 +19,10 @@ body{
 	left: 35%;
 }
 .head img {
-	border-radius:50%;
-	-webkit-border-radius:50%;
-	-o-border-radius:50%;
-	-moz-border-radius:50%;
+	border-radius:20%;
+	-webkit-border-radius:20%;
+	-o-border-radius:20%;
+	-moz-border-radius:20%;
 	border:6px solid rgba(221, 218, 215, 0.23);
 }
 .main{
