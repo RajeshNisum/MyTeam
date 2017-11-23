@@ -9,6 +9,9 @@ myApp.controller("loginController", function($scope, $location, $http,
 		};
 		$scope.encoded = btoa($scope.data.username + ":"
 				+ $scope.data.password);
+		$scope.goToEmploy = function(){
+			$location.path("/employee");
+		};
 		$scope.authenticate = function() {
 			var req = {
 				method : 'POST',
