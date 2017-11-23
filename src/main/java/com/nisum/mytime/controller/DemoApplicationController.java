@@ -3,7 +3,9 @@
  */
 package com.nisum.mytime.controller;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -11,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationCredentialsNotFoundException;
@@ -25,10 +28,12 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
+import com.nisum.mytime.model.EmpLoginData;
 import com.nisum.mytime.model.Employee;
 import com.nisum.mytime.model.UserAccount;
 import com.nisum.mytime.repository.AccountRepository;
 import com.nisum.mytime.repository.EmployeeRepository;
+import com.nisum.mytime.service.UserService;
 
 /**
  * @author nisum
@@ -45,6 +50,9 @@ public class DemoApplicationController {
 
     @Autowired
     AccountRepository repository;
+    
+    @Autowired
+    UserService userService;
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public UsernamePasswordAuthenticationToken authenticateUser(
@@ -218,4 +226,11 @@ public class DemoApplicationController {
     // return new ResponseEntity<String>(response,
     // HttpStatus.INTERNAL_SERVER_ERROR);
     // }
+    
+    @RequestMapping(value = "employee/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<List<EmpLoginData>> fetchEmployeeDataBasedOnEmpId(@PathVariable("id") long id)
+			throws FileNotFoundException, ParseException {
+		List<EmpLoginData> empLoginData = userService.fetchEmployeeDataBasedOnEmpId(id);
+		return new ResponseEntity<List<EmpLoginData>>(empLoginData, HttpStatus.OK);
+	}
 }
