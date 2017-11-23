@@ -1,17 +1,18 @@
     <div class="container"  ng-controller="managerController">
       
-         <div style="margin-bottom:30px;text-align: center;">
+         <div style="margin-bottom:30px;text-align: center;background-color: rgba(0, 178, 226, .6) !important;height:70px;">
             <p style="vertical-align:middle;font-weight: bold;;font-size: 30px;">Employee Login Hours<p>
             <span class="add-on"><i class="icon-search"></i></span>
             </div>
              <div class="input-append">
-                <input type="text" ng-model="query" ng-change="search()" class="input-large search-query" placeholder="Search">
+                <input type="text" ng-model="query"  class="input-large search-query" placeholder="Search" style="padding:1%;width:90%;">
+                <input type="submit" ng-click="searchText(query);" style="width: 7%; padding: 0; margin-bottom: 0; margin-left: 0; background: #fff;">
             <span class="add-on"><i class="icon-search"></i></span>
             </div>
             <table class="table table-striped table-condensed table-hover">
                 <thead>
                     <tr>
-                        <th class="id">Date&nbsp;<a ng-click="sort_by('id')"><i class="icon-sort"></i></a></th>
+                        <th class="id">Employee Id&nbsp;<a ng-click="sort_by('id')"><i class="icon-sort"></i></a></th>
                         <th class="name">Login&nbsp;<a ng-click="sort_by('name')"><i class="icon-sort"></i></a></th>
                         <th class="description">Logout&nbsp;<a ng-click="sort_by('description')"><i class="icon-sort"></i></a></th>
                         <th class="field3">Total Hours&nbsp;<a ng-click="sort_by('field3')"><i class="icon-sort"></i></a></th>

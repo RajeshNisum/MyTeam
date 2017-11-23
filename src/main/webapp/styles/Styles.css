@@ -1,11 +1,11 @@
 
 body{
-	background-color: rgba(0, 178, 226, .6) !important;
+	background-color: #eee;
 
 }
 
 .login-form {
-	background:#eee;
+	background:rgba(0, 178, 226, .6) !important;;
 	width: 26%;
 	margin:9% auto 4% auto;
  	position: relative;
@@ -81,9 +81,10 @@ form p a:hover {
  	
  }
 input[type="submit"]{
-	width: 99%;
+	width: 40%;
 	padding: 3%;
 	margin-bottom: 8%;
+	margin-left:25%;
 	background: #21A957;
 	font-family: 'Open Sans', sans-serif;
 	color: #ECECEC;
@@ -112,8 +113,10 @@ input[type="submit"]:hover{
 /****************/
 .copy-right {
 	position: absolute;
-	bottom:-19%;
-	left: 43.7%;
+	bottom:0;
+	width:100%;
+	background-color: #00567c;
+	text-align: center;
 }
 .copy-right p {
 	color: #fff;
@@ -143,9 +146,6 @@ input[type="submit"]:hover{
 	.main h1 {
 	padding-top: 23%;
 	}
-	.copy-right {
-	bottom: -26%;
-	}
 }
 @media (max-width:1366px){
 	.login-form {
@@ -153,15 +153,9 @@ input[type="submit"]:hover{
 	margin: 10% auto 4% auto;
 	}
 }
-	.copy-right {
-	left: 41%;
-	bottom:-18%;
-	}
+
 }
-	.copy-right {
-	left: 41%;
-	bottom:-18%;
-	}
+
 }
 @media (max-width:768px){
 	.login-form  {

@@ -1,12 +1,11 @@
 <div class="main">
 		<div class="login-form" ng-controller="loginController">
-<!-- 		<div > -->
-<!-- 						<img src="images/nisumlogo.png" /> -->
-<!-- 					</div> -->
+ 
 			<h1>Member Login</h1>
 					<div class="head">
 						<img src="images/employeetimelogo.jpg" style="width:220px;height:200px;"/>
 					</div>
+					  
 				<form ng-submit="authenticate()">
 						<input type="text" id="username" value="Email"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ng-model="data.username" ng-required='true'>
 						<input type="password" id="password"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" ng-model="data.password" ng-required='true'>
@@ -15,8 +14,9 @@
 					</div>	
 				</form>
 				<div>
-		 <button id="sign-in-or-out-button" class="btn btn-default">Sign In/Authorize</button>
-		</div>
+ <p>---------(OR)----------</p>
+		 <button id="sign-in-or-out-button" style="background:url(images/googleSignin.jpg);height:35px;width: 40%;vertical-align: middle;margin-left:31%;"></button>
+		 </div>
 		<form ng-submit="goToEmploy()">
 		<button id="secretbutton" style="display:none">Secret Buttom</button></form>
 			</div>
