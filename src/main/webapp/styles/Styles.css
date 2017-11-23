@@ -19,20 +19,15 @@ body{
 	top:-25%;
 	left: 22%;
 }
+
 .head img {
-<<<<<<< HEAD
-	border-radius:50%;
-	-webkit-border-radius:80%;
-	-o-border-radius:50%;
-	-moz-border-radius:50%;
-=======
 	border-radius:20%;
-	-webkit-border-radius:20%;
+	-webkit-border-radius:50%;
 	-o-border-radius:20%;
 	-moz-border-radius:20%;
->>>>>>> branch 'master' of https://github.com/RajeshNisum/MyTime.git
 	border:6px solid rgba(221, 218, 215, 0.23);
 }
+
 .main{
 	position:relative;
 }
