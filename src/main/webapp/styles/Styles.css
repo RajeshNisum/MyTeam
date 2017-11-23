@@ -1,8 +1,9 @@
 
 body{
-	background:#5199f0;
+	background-color: rgba(0, 178, 226, .6) !important;
 
 }
+
 .login-form {
 	background:#eee;
 	width: 26%;
@@ -15,12 +16,12 @@ body{
 
 .head {
 	position: absolute;
-	top:-15%;
-	left: 35%;
+	top:-25%;
+	left: 22%;
 }
 .head img {
 	border-radius:50%;
-	-webkit-border-radius:50%;
+	-webkit-border-radius:80%;
 	-o-border-radius:50%;
 	-moz-border-radius:50%;
 	border:6px solid rgba(221, 218, 215, 0.23);
@@ -338,7 +339,7 @@ input[type="submit"]:hover{
 	
 	.a {
 	cursor: pointer;
-	background-color: lightblue;
+	
 	}
 		
 	#customers {
@@ -363,6 +364,8 @@ input[type="submit"]:hover{
     background-color: #4CAF50;
     color: white;
 }
-
+th{
+	height:400px;
+}
 	
 }

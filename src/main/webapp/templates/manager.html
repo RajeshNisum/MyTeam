@@ -1,5 +1,54 @@
     <div class="container"  ng-controller="managerController">
-        Welcome Manager
+      
+         <div style="margin-bottom:30px;text-align: center;">
+            <p style="vertical-align:middle;font-weight: bold;;font-size: 30px;">Employee Login Hours<p>
+            <span class="add-on"><i class="icon-search"></i></span>
+            </div>
+             <div class="input-append">
+                <input type="text" ng-model="query" ng-change="search()" class="input-large search-query" placeholder="Search">
+            <span class="add-on"><i class="icon-search"></i></span>
+            </div>
+            <table class="table table-striped table-condensed table-hover">
+                <thead>
+                    <tr>
+                        <th class="id">Date&nbsp;<a ng-click="sort_by('id')"><i class="icon-sort"></i></a></th>
+                        <th class="name">Login&nbsp;<a ng-click="sort_by('name')"><i class="icon-sort"></i></a></th>
+                        <th class="description">Logout&nbsp;<a ng-click="sort_by('description')"><i class="icon-sort"></i></a></th>
+                        <th class="field3">Total Hours&nbsp;<a ng-click="sort_by('field3')"><i class="icon-sort"></i></a></th>
+                       
+                    </tr>
+                </thead>
+                <tfoot>
+                    <td colspan="6">
+                        <div >
+                            <ul>
+                                <li ng-class="{disabled: currentPage == 0}" style="display:inline;float:left;margin-left:3px;">
+                                    <a href ng-click="prevPage()">« Prev</a>
+                                </li>
+                                <li ng-repeat="n in range(pagedItems.length)" style="display:inline;float:left;margin-left:3px;"
+                                    ng-class="{active: n == currentPage}"
+                                ng-click="setPage()">
+                                    <a href ng-bind="n + 1">1</a>
+                                </li>
+                                <li ng-class="{disabled: currentPage == pagedItems.length - 1}" style="display:inline;float:left;margin-left:2px;">
+                                    <a href ng-click="nextPage()">Next »</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </td>
+                </tfoot>
+                <tbody>
+                    <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sortingOrder:reverse">
+                        <td>{{item.employeeid}}</td>
+                        <td>{{item.firstLogin}}</td>
+                        <td>{{item.lastLogout}}</td>
+                        <td>{{item.totalLoginTime}}</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
 
 

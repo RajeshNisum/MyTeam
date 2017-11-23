@@ -1,0 +1,6 @@
+myApp.controller("employeeController", function($scope, $location,$filter,$http){
+
+
+
+
+)};
