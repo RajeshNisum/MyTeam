@@ -9,6 +9,9 @@ myApp.controller("loginController", function($scope, $location, $http,
 		};
 		$scope.encoded = btoa($scope.data.username + ":"
 				+ $scope.data.password);
+		$scope.goToEmploy = function(){
+			$location.path("/employee");
+		};
 		$scope.authenticate = function() {
 			var req = {
 				method : 'POST',
@@ -22,7 +25,6 @@ myApp.controller("loginController", function($scope, $location, $http,
 					.then(
 							function(response) {
 								var role = getRoleOfUser(response.data.authorities);
-								window.alert(role);
 								if (role) {
 									$location.path("/manager");
 								} else {
